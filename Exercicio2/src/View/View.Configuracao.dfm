@@ -10,6 +10,7 @@ object ViewConfiguracao: TViewConfiguracao
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  Position = poScreenCenter
   TextHeight = 15
   object PanelContainer: TPanel
     Left = 0
