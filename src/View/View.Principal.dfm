@@ -12,6 +12,7 @@ object ViewPrincipal: TViewPrincipal
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
+  OnCreate = FormCreate
   TextHeight = 15
   object PanelLegenda: TPanel
     Left = 0
@@ -23,9 +24,6 @@ object ViewPrincipal: TViewPrincipal
     Color = clWhite
     ParentBackground = False
     TabOrder = 0
-    ExplicitLeft = 232
-    ExplicitTop = 224
-    ExplicitWidth = 185
     object LabelLegendaMetadeDoBurado: TLabel
       AlignWithMargins = True
       Left = 286
@@ -41,7 +39,6 @@ object ViewPrincipal: TViewPrincipal
       Font.Style = []
       ParentFont = False
       Layout = tlCenter
-      ExplicitLeft = 327
       ExplicitHeight = 13
     end
     object LabelLegendaSaiuDoBuraco: TLabel
@@ -59,7 +56,6 @@ object ViewPrincipal: TViewPrincipal
       Font.Style = []
       ParentFont = False
       Layout = tlCenter
-      ExplicitLeft = 576
       ExplicitHeight = 13
     end
     object LabelLegendaEscalandoBuraco: TLabel
@@ -77,7 +73,6 @@ object ViewPrincipal: TViewPrincipal
       Font.Style = []
       ParentFont = False
       Layout = tlCenter
-      ExplicitLeft = 144
       ExplicitHeight = 13
     end
     object LabelLegendaInoperante: TLabel
@@ -95,7 +90,6 @@ object ViewPrincipal: TViewPrincipal
       Font.Style = []
       ParentFont = False
       Layout = tlCenter
-      ExplicitLeft = 42
       ExplicitHeight = 13
     end
     object PanelLegendaSaiuDoBuraco: TPanel
@@ -166,17 +160,14 @@ object ViewPrincipal: TViewPrincipal
     Left = 0
     Top = 0
     Width = 624
-    Height = 400
+    Height = 359
     Align = alClient
     BevelOuter = bvNone
     Color = clWhite
     ParentBackground = False
     ShowCaption = False
     TabOrder = 1
-    ExplicitLeft = 232
-    ExplicitTop = 224
-    ExplicitWidth = 185
-    ExplicitHeight = 41
+    ExplicitHeight = 400
     object PanelStatus: TPanel
       AlignWithMargins = True
       Left = 200
@@ -192,20 +183,17 @@ object ViewPrincipal: TViewPrincipal
       ParentBackground = False
       ShowCaption = False
       TabOrder = 0
-      ExplicitLeft = 40
-      ExplicitTop = 5
-      ExplicitWidth = 581
     end
     object PanelEscalar: TPanel
       AlignWithMargins = True
       Left = 200
-      Top = 313
+      Top = 303
       Width = 224
-      Height = 57
+      Height = 36
       Margins.Left = 200
-      Margins.Top = 20
+      Margins.Top = 10
       Margins.Right = 200
-      Margins.Bottom = 30
+      Margins.Bottom = 20
       Align = alClient
       BevelOuter = bvNone
       Caption = 'Iniciar Escalada'
@@ -218,18 +206,17 @@ object ViewPrincipal: TViewPrincipal
       ParentBackground = False
       ParentFont = False
       TabOrder = 1
-      ExplicitLeft = 232
-      ExplicitTop = 224
-      ExplicitWidth = 185
-      ExplicitHeight = 41
+      ExplicitTop = 313
+      ExplicitHeight = 57
       object SpeedButtonIniciar: TSpeedButton
         Left = 0
         Top = 0
         Width = 224
-        Height = 57
+        Height = 36
         Cursor = crHandPoint
         Align = alClient
         Flat = True
+        OnClick = SpeedButtonIniciarClick
         ExplicitLeft = 304
         ExplicitTop = 40
         ExplicitWidth = 23
@@ -255,6 +242,53 @@ object ViewPrincipal: TViewPrincipal
       ParentBackground = False
       ParentFont = False
       TabOrder = 2
+    end
+  end
+  object PanelEstatistica: TPanel
+    Left = 0
+    Top = 359
+    Width = 624
+    Height = 41
+    Align = alBottom
+    BevelOuter = bvNone
+    Color = clWhite
+    ParentBackground = False
+    TabOrder = 2
+    ExplicitLeft = -8
+    ExplicitTop = 335
+    object LabelQuantidadeSubidas: TLabel
+      AlignWithMargins = True
+      Left = 264
+      Top = 3
+      Width = 9
+      Height = 35
+      Align = alLeft
+      Caption = '0'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentFont = False
+      Layout = tlCenter
+      ExplicitHeight = 21
+    end
+    object Label4: TLabel
+      AlignWithMargins = True
+      Left = 3
+      Top = 3
+      Width = 255
+      Height = 35
+      Align = alLeft
+      Caption = 'Quantidade de vezes que a minhoca subiu: '
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentFont = False
+      Layout = tlCenter
+      ExplicitHeight = 17
     end
   end
 end
